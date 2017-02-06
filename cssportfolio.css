@@ -1,0 +1,716 @@
+@font-face {
+    font-family: Solena-Regular;
+    src: url(Solena-Regular.otf);
+}
+@font-face {
+  font-family: SWRomns;
+  src: url(SWRomns.ttf);
+}
+
+body, html {
+  background-image: radial-gradient(60% 100% at 50% 80%, rgb(40, 0, 115), rgb(0, 0, 0));
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+/*body, html {
+  background-color: black;
+  background-image: radial-gradient(60% 60% at 50% 50%, rgb(40, 0, 115), rgb(0, 0, 0));
+}*/
+ body {
+   height: 200%;
+   margin: 0;
+   font-family: SWRomns, Helvetica, sans-serif;
+   text-transform: uppercase;
+ }
+
+
+ html #landing {
+   display: block;
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   background-image: radial-gradient(60% 60% at 50% 50%, rgb(40, 0, 115), rgb(0, 0, 0));
+ }
+
+ #landing {
+   overflow: hidden;
+ }
+
+
+/*-----Wrapper-----*/
+
+ #wrapper {
+   width: 960px;
+   margin: 0 auto 0 auto;
+   position: relative;
+   z-index: 10;
+ }
+
+/*-----Navigation-----*/
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 150%;
+}
+
+.active {
+  font-size: 300%;
+  opacity: 0.1;
+}
+
+/*--------- Starfield(Fade+Animation) -------*/
+
+.starfield {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 15s; /* Firefox < 16 */
+      -ms-animation: fadein 15s; /* Internet Explorer */
+       -o-animation: fadein 15s; /* Opera < 12.1 */
+          animation: fadein 15s;
+}
+
+.starfield > * {
+  position: absolute;
+  top: -400%;
+  left: 0;
+  height: 1000%;
+  width: 100%;
+}
+
+.starfield > * {
+  background-size: 200px 200px;
+  background-image: radial-gradient(2px 2px at 40px 60px, #ccc, rgba(0,0,0,0)),
+   radial-gradient(2px 2px at 20px 50px, #ddd, rgba(0,0,0,0)),
+   radial-gradient(2px 2px at 30px 100px, #eee, rgba(0,0,0,0)),
+   radial-gradient(2px 2px at 40px 60px, #fff, rgba(0,0,0,0)),
+   radial-gradient(2px 2px at 110px 90px, #ccc, rgba(0,0,0,0)),
+   radial-gradient(2px 2px at 190px 150px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+}
+
+.starfield > * {
+  transform-origin: 50% 50%;
+  animation-name: starfieldRotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  }
+
+.starfieldlanding {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 15s; /* Firefox < 16 */
+        -ms-animation: fadein 15s; /* Internet Explorer */
+         -o-animation: fadein 15s; /* Opera < 12.1 */
+            animation: fadein 15s;
+  }
+
+.starfieldlanding > * {
+    position: absolute;
+    top: -450%;
+    left: 0;
+    height: 1000%;
+    width: 100%;
+  }
+
+.starfieldlanding > * {
+    background-size: 200px 200px;
+    background-image: radial-gradient(2px 2px at 40px 60px, #ccc, rgba(0,0,0,0)),
+     radial-gradient(2px 2px at 20px 50px, #ddd, rgba(0,0,0,0)),
+     radial-gradient(2px 2px at 30px 100px, #eee, rgba(0,0,0,0)),
+     radial-gradient(2px 2px at 40px 60px, #fff, rgba(0,0,0,0)),
+     radial-gradient(2px 2px at 110px 90px, #ccc, rgba(0,0,0,0)),
+     radial-gradient(2px 2px at 190px 150px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+  }
+
+.starfieldlanding > * {
+    transform-origin: 50% 50%;
+    animation-name: starfieldRotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    }
+    .starfieldlanding > *:nth-child(1){
+      animation-duration: 16s;
+    }
+    .starfieldlanding > *:nth-child(2){
+      animation-duration: 20s;
+    }
+    .starfieldlanding > *:nth-child(3){
+      animation-duration: 35s;
+    }
+    .starfieldlanding > *:nth-child(4){
+      animation-duration: 55s;
+    }
+    .starfieldlanding > *:nth-child(5){
+      animation-duration: 120s;
+    }
+
+  .starfield > *:nth-child(1){
+    animation-duration: 16s;
+  }
+  .starfield > *:nth-child(2){
+    animation-duration: 20s;
+  }
+  .starfield > *:nth-child(3){
+    animation-duration: 35s;
+  }
+  .starfield > *:nth-child(4){
+    animation-duration: 55s;
+  }
+  .starfield > *:nth-child(5){
+    animation-duration: 120s;
+  }
+
+@keyframes starfieldRotate {
+  from {transform:rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*-----Landing-----*/
+
+.stylelandingp {
+  color: white;
+  font-size: 300%;
+  text-align: center;
+  font-family: Solena-Regular, Helvetica, sans-serif;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 5s; /* Firefox < 16 */
+      -ms-animation: fadein 5s; /* Internet Explorer */
+       -o-animation: fadein 5s; /* Opera < 12.1 */
+          animation: fadein 5s;
+}
+
+.stylelandingp  p{
+  margin: 0px 0px 0px 0px;
+}
+
+.stylelandingp a:visited, a:link, a:active {
+  color: white;
+  text-decoration: none;
+  z-index: 150;
+}
+
+.stylelandingp a:hover {
+  color: grey;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.aboutwebsite {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 80%;
+  z-index: 10000;
+  letter-spacing: 10px;
+  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 5s; /* Firefox < 16 */
+      -ms-animation: fadein 5s; /* Internet Explorer */
+       -o-animation: fadein 5s; /* Opera < 12.1 */
+          animation: fadein 5s;
+}
+
+.aboutwebsite a {
+  color: white;
+}
+/*-----h1-----*/
+
+h1 {
+  color: white;
+  font-size: 500%;
+  text-align: center;
+  font-family: SWRomns, Helvetica, sans-serif;
+  position: static;
+  padding-top: 75px;
+  width: 100%;
+  margin: 0;
+  font-weight: normal;
+  z-index: 100;
+  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 5s; /* Firefox < 16 */
+      -ms-animation: fadein 5s; /* Internet Explorer */
+       -o-animation: fadein 5s; /* Opera < 12.1 */
+          animation: fadein 5s;
+}
+
+h1  p{
+  margin: 0px 0px 0px 0px;
+}
+
+.h1landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  padding-top: 0;
+}
+/*-----h2-----*/
+
+h2 {
+  color: white;
+}
+
+.case1h2 {
+  margin-top: -200px;
+}
+
+.case2h2 {
+  margin-top: 0;
+}
+
+.case3h2 {
+  margin-top: 0;
+}
+/*-----h3----*/
+
+h3 {
+  color: white;
+}
+
+/*-----Section-----*/
+
+section {
+  color: white;
+  font-size: 150%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.lastsection {
+  margin-bottom: 0px;
+}
+
+/*-----Articles-----*/
+
+article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 250px;
+  padding: 25px 25px 25px 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+.articlecontact {
+  margin-top: 1000px;
+}
+
+.home a {
+  color: white;
+  text-decoration: underline;
+}
+/*-----Unordered Lists-----*/
+
+ul {
+  color: white;
+  list-style-type: none;
+  text-decoration: underline;
+}
+
+ul a{
+  color: white;
+}
+
+li a{
+  font-size: 80%;
+  padding: 5px;
+}
+/*-----Planets-----*/
+
+
+/*-----Earth-----*/
+
+.imgearth {
+  transition: all .5s ease-in-out;
+  height: 250px;
+  width: 250px;
+  margin: 225px 0 0 -100px;
+}
+
+.imgearth:hover {
+  opacity: 0.5;
+}
+
+.textearth {
+  color: white;
+  opacity: 0;
+  font-size: 250%;
+  position: relative;
+  visibility: hidden;
+  margin: -60px 150px 0 500px;
+  float: right;
+  z-index: 10;
+}
+
+.imgearth:hover ~ .textelement {
+  opacity: 1;
+  visibility: visible;
+  animation: fadein 0.3s;
+}
+
+.imgearth:hover ~ .textearth {
+  opacity: 1;
+  visibility: visible;
+  animation: fadein 0.5s;
+}
+
+
+
+/*-----Moon-----*/
+
+.wrapmoon {
+  margin-top: 450px;
+}
+.imgmoon {
+  transition: all .5s ease-in-out;
+  height: 250px;
+  width: 250px;
+  margin: 0 100px 0 700px;
+  position: relative;
+}
+
+.imgmoon:hover {
+  opacity: 0.5;
+}
+
+.textmoon {
+  color: white;
+  opacity: 0;
+  font-size: 200%;
+  position: relative;
+  visibility: hidden;
+  margin: -225px 500px 0 150px;
+  float: left;
+}
+
+.imgmoon:hover + .textmoon {
+  opacity: 1;
+  visibility: visible;
+  animation: fadein 0.5s;
+}
+
+/*-----Mars-----*/
+
+.imgmars {
+  transition: all .5s ease-in-out;
+  height: 250px;
+  width: 250px;
+  margin: 150px 0 0 0;
+}
+
+.imgmars:hover {
+  opacity: 0.5;
+}
+
+.textmars {
+  color: white;
+  opacity: 0;
+  font-size: 150%;
+  position: relative;
+  visibility: hidden;
+  margin: -200px 150px 0 500px;
+  float: right;
+  z-index: 10;
+}
+
+.imgmars:hover + .textmars {
+  opacity: 1;
+  visibility: visible;
+  animation: fadein 0.5s;
+}
+
+/*-----Cases-----*/
+
+.case1 {
+  padding-top: 0;
+}
+
+.case2 {
+  padding-top: 0;
+}
+
+.case3 {
+  padding-top: 0;
+}
+
+
+.backbutton {
+  position: absolute;
+  margin-top: 0;
+  margin-left: -333px;
+}
+
+.backbutton img {
+  transform: scale(0.5, 0.5);
+  opacity: .7;
+}
+
+.backbutton:hover img {
+  opacity: 1;
+}
+
+.caseimageearth {
+  overflow: hidden;
+  margin-left: -242px;
+}
+
+.caseimageearth img {
+  margin-top: -50%;
+  margin-left: -50%;
+  overflow: hidden;
+}
+
+.caseimagemoon {
+  overflow: hidden;
+  margin-left: -706px;
+}
+
+.caseimagemoon img {
+  margin-top: -50%;
+  margin-left: -50%;
+  overflow: hidden;
+}
+
+.caseimagemars {
+  overflow: hidden;
+  margin-left: -706px;
+}
+
+.caseimagemars img {
+  margin-top: -50%;
+  margin-left: -50%;
+  overflow: hidden;
+}
+
+.caseworkimage {
+  width: 940px;
+  height: 540px;
+}
+
+.caseworkimage img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.caseworkimage:hover img{
+  filter: none;
+  opacity: 1;
+}
+/*-----Form-----*/
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: white;
+  font-size: 1em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: white;
+}
+
+/*--input::placeholder, textarea::placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+/*--input:focus::placeholder, textarea::focus:placeholder {
+  color: white;
+}
+--*/
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: white;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: white;
+}
+
+/*--input:hover::placeholder, textarea:hover::placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+/*--input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: white;
+}
+
+/*--input:hover::placeholder, textarea:hover::placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+/*--input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: white  ;
+}
+--*/
+
+header {
+  position: relative;
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 50px auto;
+}
+
+input {
+  font-family: SWRomns, Helvetica, sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.5);
+
+  border: solid 2px white;
+  border-bottom: none;
+}
+
+input:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+
+  background: transparent;
+  outline: none;
+
+  color: rgba(255, 255, 255, 0.5);
+  font-family: SWRomns, Helvetica, sans-serif;
+  font-size: 0.875em;
+
+  border: solid 2px white;
+}
+
+textarea:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+#submit {
+  width: 502px;
+
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+
+  font-family: SWRomns, Helvetica, sans-serif;
+  font-size: 0.875em;
+  color: white;
+
+  outline:none;
+  cursor: pointer;
+
+  border: solid 2px white;
+  border-top: none;
+}
+
+#submit:hover {
+  color: white;
+}
